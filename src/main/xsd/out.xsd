@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="CIFIN">
+        <xsd:complexType mixed="true">
+            <xsd:sequence>
+                <xsd:element name="Tercero" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                        <xsd:sequence>
+                            <xsd:element name="IdentificadorLinea" minOccurs="0" type="xsd:int"/>
+                            <xsd:element name="TipoIdentificacion" minOccurs="0" type="xsd:string"/>
+                            <xsd:element name="CodigoTipoIndentificacion" minOccurs="0" type="xsd:int"/>
+                            <xsd:element name="NumeroIdentificacion" minOccurs="0" type="xsd:int"/>
+                            <xsd:element name="NombreTitular" minOccurs="0" type="xsd:string"/>
+                            <xsd:element name="NombreCiiu" minOccurs="0" type="xsd:string"/>
+                            <xsd:element name="LugarExpedicion" minOccurs="0" type="xsd:normalizedString"/>
+                            <xsd:element name="FechaExpedicion" minOccurs="0" type="xsd:normalizedString"/>
+                            <xsd:element name="Estado" minOccurs="0" type="xsd:normalizedString"/>
+                            <xsd:element name="NumeroInforme" minOccurs="0" type="xsd:long"/>
+                            <xsd:element name="EstadoTitular" minOccurs="0" type="xsd:string"/>
+                            <xsd:element name="RangoEdad" minOccurs="0" type="xsd:normalizedString"/>
+                            <xsd:element name="CodigoCiiu" minOccurs="0" type="xsd:string"/>
+                            <xsd:element name="CodigoDepartamento" minOccurs="0" type="xsd:int"/>
+                            <xsd:element name="CodigoMunicipio" minOccurs="0" type="xsd:int"/>
+                            <xsd:element name="Fecha" minOccurs="0" type="xsd:normalizedString"/>
+                            <xsd:element name="Hora" minOccurs="0" type="xsd:normalizedString"/>
+                            <xsd:element name="Entidad" minOccurs="0" type="xsd:string"/>
+                            <xsd:element name="RespuestaConsulta" minOccurs="0" type="xsd:int"/>
+                            <xsd:element name="Consolidado" minOccurs="0">
+                                <xsd:complexType mixed="true">
+                                    <xsd:sequence>
+                                        <xsd:element name="ResumenPrincipal" minOccurs="0">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="Registro" maxOccurs="unbounded">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="PaqueteInformacion" minOccurs="0" type="xsd:string"/>
+                                                                <xsd:element name="NumeroObligaciones" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="TotalSaldo" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="ParticipacionDeuda" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="NumeroObligacionesDia" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="SaldoObligacionesDia" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="CuotaObligacionesDia" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="CantidadObligacionesMora" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="SaldoObligacionesMora" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="CuotaObligacionesMora" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="ValorMora" minOccurs="0" type="xsd:int"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="Registro" minOccurs="0">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="PaqueteInformacion" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="NumeroObligaciones" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="TotalSaldo" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="ParticipacionDeuda" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="NumeroObligacionesDia" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="SaldoObligacionesDia" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="CuotaObligacionesDia" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="CantidadObligacionesMora" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="SaldoObligacionesMora" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="CuotaObligacionesMora" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="ValorMora" minOccurs="0" type="xsd:int"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="CuentasVigentes" minOccurs="0">
+                                <xsd:complexType mixed="true">
+                                    <xsd:sequence>
+                                        <xsd:element name="Obligacion" maxOccurs="unbounded">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="PaqueteInformacion" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="IdentificadorLinea" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="TipoContrato" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="TipoEntidad" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="NombreEntidad" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="Ciudad" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="Sucursal" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="NumeroObligacion" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="EstadoObligacion" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="FechaApertura" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="FechaTerminacion" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="ValorInicial" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="Comportamientos" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="FechaCorte" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="FechaPermanencia" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="ChequesDevueltos" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="DiasCartera" minOccurs="0" type="xsd:string"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="SectorFinancieroAlDia" minOccurs="0">
+                                <xsd:complexType mixed="true">
+                                    <xsd:sequence>
+                                        <xsd:element name="Obligacion" maxOccurs="unbounded">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="PaqueteInformacion" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="IdentificadorLinea" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="TipoContrato" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="EstadoContrato" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="TipoEntidad" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="NombreEntidad" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="Ciudad" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="Sucursal" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="NumeroObligacion" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="Calidad" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="EstadoObligacion" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="ModalidadCredito" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="LineaCredito" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="Periodicidad" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="FechaApertura" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="FechaTerminacion" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="Calificacion" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="ValorInicial" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="SaldoObligacion" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="ValorMora" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="ValorCuota" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="TipoMoneda" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="CuotasCanceladas" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="TipoGarantia" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="CubrimientoGarantia" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="MoraMaxima" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="Comportamientos" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="ParticipacionDeuda" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="ProbabilidadNoPago" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="FechaCorte" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="ModoExtincion" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="FechaPago" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="FechaPermanencia" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="NumeroReestructuraciones" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="NaturalezaReestructuracion" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="TipoEntidadOriginadoraCartera" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="EntidadOriginadoraCartera" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="TipoPago" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="EstadoTitular" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="NumeroCuotasPactadas" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="NumeroCuotasMora" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="Reestructurado" minOccurs="0" type="xsd:normalizedString"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="SectorFinancieroExtinguidas" minOccurs="0">
+                                <xsd:complexType mixed="true">
+                                    <xsd:sequence>
+                                        <xsd:element name="Obligacion" minOccurs="0">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="PaqueteInformacion" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="IdentificadorLinea" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="TipoContrato" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="EstadoContrato" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="TipoEntidad" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="NombreEntidad" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="Ciudad" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="Sucursal" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="NumeroObligacion" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="Calidad" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="EstadoObligacion" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="ModalidadCredito" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="LineaCredito" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="FechaApertura" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="ValorInicial" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="SaldoObligacion" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="ValorMora" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="ValorCuota" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="CuotasCanceladas" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="MoraMaxima" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="Comportamientos" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="ParticipacionDeuda" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="FechaCorte" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="ModoExtincion" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="FechaPago" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="FechaPermanencia" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="NumeroReestructuraciones" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="NaturalezaReestructuracion" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="MarcaTarjeta" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="ClaseTarjeta" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="TipoPago" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="EstadoTitular" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="NumeroCuotasPactadas" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="NumeroCuotasMora" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="Reestructurado" minOccurs="0" type="xsd:normalizedString"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="SectorRealAlDia" minOccurs="0">
+                                <xsd:complexType mixed="true">
+                                    <xsd:sequence>
+                                        <xsd:element name="Obligacion" maxOccurs="unbounded">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="PaqueteInformacion" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="IdentificadorLinea" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="TipoContrato" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="EstadoContrato" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="TipoEntidad" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="NombreEntidad" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="Ciudad" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="Sucursal" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="NumeroObligacion" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="Calidad" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="EstadoObligacion" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="LineaCredito" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="Periodicidad" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="FechaApertura" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="FechaTerminacion" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="ValorInicial" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="SaldoObligacion" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="ValorMora" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="ValorCuota" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="CuotasCanceladas" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="MoraMaxima" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="Comportamientos" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="ParticipacionDeuda" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="FechaCorte" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="ModoExtincion" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="FechaPago" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="FechaPermanencia" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="ChequesDevueltos" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="Plazo" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="DiasCartera" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="TipoPago" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="EstadoTitular" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="NumeroCuotasPactadas" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="NumeroCuotasMora" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="ValorCargoFijo" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="ClausulaPermanencia" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="Reestructurado" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="Vigencia" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="NumeroMesesContrato" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="NumeroMesesClausula" minOccurs="0" type="xsd:string"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="SectorRealExtinguidas" minOccurs="0">
+                                <xsd:complexType mixed="true">
+                                    <xsd:sequence>
+                                        <xsd:element name="Obligacion" maxOccurs="unbounded">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="PaqueteInformacion" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="IdentificadorLinea" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="TipoContrato" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="EstadoContrato" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="TipoEntidad" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="NombreEntidad" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="Ciudad" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="Sucursal" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="NumeroObligacion" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="Calidad" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="EstadoObligacion" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="LineaCredito" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="Periodicidad" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="FechaApertura" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="FechaTerminacion" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="ValorInicial" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="SaldoObligacion" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="ValorMora" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="ValorCuota" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="CuotasCanceladas" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="MoraMaxima" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="Comportamientos" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="ParticipacionDeuda" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="FechaCorte" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="ModoExtincion" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="FechaPago" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="FechaPermanencia" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="ChequesDevueltos" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="Plazo" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="DiasCartera" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="TipoPago" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="EstadoTitular" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="NumeroCuotasPactadas" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="NumeroCuotasMora" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="ValorCargoFijo" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="ClausulaPermanencia" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="Reestructurado" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="Vigencia" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="NumeroMesesContrato" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="NumeroMesesClausula" minOccurs="0" type="xsd:int"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="Endeudamiento" minOccurs="0">
+                                <xsd:complexType mixed="true">
+                                    <xsd:sequence>
+                                        <xsd:element name="EncabezadoEndeudamiento" minOccurs="0">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="NumeroEntidadesTrimestreI" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="FechaTrimestreI" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="NumeroEntidadesTrimestreII" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="FechaTrimestreII" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="NumeroEntidadesTrimestreIII" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="FechaTrimestreIII" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="NumeroComprasTrimestreI" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="NumeroComprasTrimestreII" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="NumeroComprasTrimestreIII" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="NumeroReestructuracionesTrimestreI" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="NumeroReestructuracionesTrimestreII" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="NumeroReestructuracionesTrimestreIII" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="NumeroCastigosTrimestreI" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="NumeroCastigosTrimestreII" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="NumeroCastigosTrimestreIII" minOccurs="0" type="xsd:int"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="EndeudamientoTrimI" minOccurs="0">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="Endeudamiento71" maxOccurs="unbounded">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="Calificacion" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="TipoModena" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="NumeroOperacionesComercial" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="NumeroOperacionesConsumo" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="NumeroOperacionesVivienda" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="NumeroOperacionesMicrocredito" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="ValorDeudaComercial" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="ValorDeudaConsumo" minOccurs="0" type="xsd:decimal"/>
+                                                                <xsd:element name="ValorDeudaVivienda" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="ValorDeudaMicrocredito" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="Total" minOccurs="0" type="xsd:decimal"/>
+                                                                <xsd:element name="ParticipacionTotalDeudas" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="CubrimientoGarantiaComercial" minOccurs="0" type="xsd:string"/>
+                                                                <xsd:element name="CubrimientoGarantiaConsumo" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="CubrimientoGarantiaVivienda" minOccurs="0" type="xsd:string"/>
+                                                                <xsd:element name="CubrimientoGarantiaMicrocredito" minOccurs="0" type="xsd:string"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                    <xsd:element name="Endeudamiento72" maxOccurs="unbounded">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="TipoMoneda" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="NumeroContingencias" minOccurs="0" type="xsd:string"/>
+                                                                <xsd:element name="ValorContingencias" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="CuotaEsperada" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="CumplimientoCuota" minOccurs="0" type="xsd:decimal"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                    <xsd:element name="Endeudamiento73" maxOccurs="unbounded">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="TipoEntidad" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="NombreEntidad" minOccurs="0" type="xsd:string"/>
+                                                                <xsd:element name="TipoEntidadOriginadoraCartera" minOccurs="0" type="xsd:string"/>
+                                                                <xsd:element name="EntidadOriginadoraCartera" minOccurs="0" type="xsd:string"/>
+                                                                <xsd:element name="TipoFideicomiso" minOccurs="0" type="xsd:string"/>
+                                                                <xsd:element name="NumeroFideicomiso" minOccurs="0" type="xsd:string"/>
+                                                                <xsd:element name="ModalidadCredito" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="Calificacion" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="TipoMoneda" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="NumeroOperadores" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="ValorDeuda" minOccurs="0" type="xsd:decimal"/>
+                                                                <xsd:element name="ParticipacionTotalDeudas" minOccurs="0" type="xsd:decimal"/>
+                                                                <xsd:element name="CubrimientoGarantia" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="TipoGarantia" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="FechaUltimoAvaluo" minOccurs="0" type="xsd:string"/>
+                                                                <xsd:element name="CuotaEsperada" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="CumplimientoCuota" minOccurs="0" type="xsd:normalizedString"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="EndeudamientoTrimII" minOccurs="0">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="Endeudamiento81" maxOccurs="unbounded">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="Calificacion" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="TipoModena" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="NumeroOperacionesComercial" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="NumeroOperacionesConsumo" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="NumeroOperacionesVivienda" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="NumeroOperacionesMicrocredito" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="ValorDeudaComercial" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="ValorDeudaConsumo" minOccurs="0" type="xsd:decimal"/>
+                                                                <xsd:element name="ValorDeudaVivienda" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="ValorDeudaMicrocredito" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="Total" minOccurs="0" type="xsd:decimal"/>
+                                                                <xsd:element name="ParticipacionTotalDeudas" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="CubrimientoGarantiaComercial" minOccurs="0" type="xsd:string"/>
+                                                                <xsd:element name="CubrimientoGarantiaConsumo" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="CubrimientoGarantiaVivienda" minOccurs="0" type="xsd:string"/>
+                                                                <xsd:element name="CubrimientoGarantiaMicrocredito" minOccurs="0" type="xsd:string"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                    <xsd:element name="Endeudamiento82" maxOccurs="unbounded">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="TipoMoneda" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="NumeroContingencias" minOccurs="0" type="xsd:string"/>
+                                                                <xsd:element name="ValorContingencias" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="CuotaEsperada" minOccurs="0" type="xsd:decimal"/>
+                                                                <xsd:element name="CumplimientoCuota" minOccurs="0" type="xsd:decimal"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                    <xsd:element name="Endeudamiento83" maxOccurs="unbounded">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="TipoEntidad" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="NombreEntidad" minOccurs="0" type="xsd:string"/>
+                                                                <xsd:element name="TipoEntidadOriginadoraCartera" minOccurs="0" type="xsd:string"/>
+                                                                <xsd:element name="EntidadOriginadoraCartera" minOccurs="0" type="xsd:string"/>
+                                                                <xsd:element name="TipoFideicomiso" minOccurs="0" type="xsd:string"/>
+                                                                <xsd:element name="NumeroFideicomiso" minOccurs="0" type="xsd:string"/>
+                                                                <xsd:element name="ModalidadCredito" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="Calificacion" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="TipoMoneda" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="NumeroOperadores" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="ValorDeuda" minOccurs="0" type="xsd:decimal"/>
+                                                                <xsd:element name="ParticipacionTotalDeudas" minOccurs="0" type="xsd:decimal"/>
+                                                                <xsd:element name="CubrimientoGarantia" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="TipoGarantia" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="FechaUltimoAvaluo" minOccurs="0" type="xsd:string"/>
+                                                                <xsd:element name="CuotaEsperada" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="CumplimientoCuota" minOccurs="0" type="xsd:normalizedString"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="EndeudamientoTrimIII" minOccurs="0">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="Endeudamiento91" maxOccurs="unbounded">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="Calificacion" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="TipoModena" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="NumeroOperacionesComercial" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="NumeroOperacionesConsumo" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="NumeroOperacionesVivienda" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="NumeroOperacionesMicrocredito" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="ValorDeudaComercial" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="ValorDeudaConsumo" minOccurs="0" type="xsd:decimal"/>
+                                                                <xsd:element name="ValorDeudaVivienda" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="ValorDeudaMicrocredito" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="Total" minOccurs="0" type="xsd:decimal"/>
+                                                                <xsd:element name="ParticipacionTotalDeudas" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="CubrimientoGarantiaComercial" minOccurs="0" type="xsd:string"/>
+                                                                <xsd:element name="CubrimientoGarantiaConsumo" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="CubrimientoGarantiaVivienda" minOccurs="0" type="xsd:string"/>
+                                                                <xsd:element name="CubrimientoGarantiaMicrocredito" minOccurs="0" type="xsd:string"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                    <xsd:element name="Endeudamiento92" maxOccurs="unbounded">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="TipoMoneda" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="NumeroContingencias" minOccurs="0" type="xsd:string"/>
+                                                                <xsd:element name="ValorContingencias" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="CuotaEsperada" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="CumplimientoCuota" minOccurs="0" type="xsd:decimal"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                    <xsd:element name="Endeudamiento93" maxOccurs="unbounded">
+                                                        <xsd:complexType mixed="true">
+                                                            <xsd:sequence>
+                                                                <xsd:element name="TipoEntidad" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="NombreEntidad" minOccurs="0" type="xsd:string"/>
+                                                                <xsd:element name="TipoEntidadOriginadoraCartera" minOccurs="0" type="xsd:string"/>
+                                                                <xsd:element name="EntidadOriginadoraCartera" minOccurs="0" type="xsd:string"/>
+                                                                <xsd:element name="TipoFideicomiso" minOccurs="0" type="xsd:string"/>
+                                                                <xsd:element name="NumeroFideicomiso" minOccurs="0" type="xsd:string"/>
+                                                                <xsd:element name="ModalidadCredito" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="Calificacion" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="TipoMoneda" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="NumeroOperadores" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="ValorDeuda" minOccurs="0" type="xsd:decimal"/>
+                                                                <xsd:element name="ParticipacionTotalDeudas" minOccurs="0" type="xsd:decimal"/>
+                                                                <xsd:element name="CubrimientoGarantia" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="TipoGarantia" minOccurs="0" type="xsd:normalizedString"/>
+                                                                <xsd:element name="FechaUltimoAvaluo" minOccurs="0" type="xsd:string"/>
+                                                                <xsd:element name="CuotaEsperada" minOccurs="0" type="xsd:int"/>
+                                                                <xsd:element name="CumplimientoCuota" minOccurs="0" type="xsd:normalizedString"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="HuellaConsulta" minOccurs="0">
+                                <xsd:complexType mixed="true">
+                                    <xsd:sequence>
+                                        <xsd:element name="Consulta" maxOccurs="unbounded">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element name="FechaConsulta" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="NombreTipoEntidad" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="NombreEntidad" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="Sucursal" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="Ciudad" minOccurs="0" type="xsd:normalizedString"/>
+                                                    <xsd:element name="MotivoConsulta" minOccurs="0" type="xsd:string"/>
+                                                    <xsd:element name="CodigoTipoEntidad" minOccurs="0" type="xsd:int"/>
+                                                    <xsd:element name="CodigoEntidad" minOccurs="0" type="xsd:int"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="archivo" type="xsd:normalizedString" use="required"/>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
